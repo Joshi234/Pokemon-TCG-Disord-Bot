@@ -1,0 +1,634 @@
+[
+    {
+        "id": "2765",
+        "name": "SWSH05: Battle Styles"
+    },
+    {
+        "id": "2776",
+        "name": "First Partner Pack"
+    },
+    {
+        "id": "2754",
+        "name": "Shining Fates"
+    },
+    {
+        "id": "2781",
+        "name": "Shiny Vault"
+    },
+    {
+        "id": "2782",
+        "name": "McDonald's 25th Anniversary Promos"
+    },
+    {
+        "id": "2701",
+        "name": "Vivid Voltage"
+    },
+    {
+        "id": "2685",
+        "name": "Champions Path"
+    },
+    {
+        "id": "2675",
+        "name": "Darkness Ablaze"
+    },
+    {
+        "id": "2686",
+        "name": "Battle Academy"
+    },
+    {
+        "id": "2626",
+        "name": "Rebel Clash"
+    },
+    {
+        "id": "2585",
+        "name": "Sword & Shield"
+    },
+    {
+        "id": "2545",
+        "name": "SWSH Black Star Promos"
+    },
+    {
+        "id": "2534",
+        "name": "Cosmic Eclipse"
+    },
+    {
+        "id": "2555",
+        "name": "McDonald's Promos 2019"
+    },
+    {
+        "id": "2480",
+        "name": "Hidden Fates"
+    },
+    {
+        "id": "2594",
+        "name": "Hidden Fates: Shiny Vault"
+    },
+    {
+        "id": "2464",
+        "name": "Unified Minds"
+    },
+    {
+        "id": "2420",
+        "name": "Unbroken Bonds"
+    },
+    {
+        "id": "2409",
+        "name": "Detective Pikachu"
+    },
+    {
+        "id": "2377",
+        "name": "Team Up"
+    },
+    {
+        "id": "2328",
+        "name": "Lost Thunder"
+    },
+    {
+        "id": "2364",
+        "name": "McDonald's Promos 2018"
+    },
+    {
+        "id": "2374",
+        "name": "Miscellaneous Cards & Products"
+    },
+    {
+        "id": "2295",
+        "name": "Dragon Majesty"
+    },
+    {
+        "id": "2278",
+        "name": "Celestial Storm"
+    },
+    {
+        "id": "2282",
+        "name": "World Championship Decks"
+    },
+    {
+        "id": "2209",
+        "name": "Forbidden Light"
+    },
+    {
+        "id": "2208",
+        "name": "SM Trainer Kit: Alolan Sandslash & Alolan Ninetales"
+    },
+    {
+        "id": "2178",
+        "name": "Ultra Prism"
+    },
+    {
+        "id": "2148",
+        "name": "McDonald's Promos 2017"
+    },
+    {
+        "id": "2071",
+        "name": "Crimson Invasion"
+    },
+    {
+        "id": "2054",
+        "name": "Shining Legends"
+    },
+    {
+        "id": "1957",
+        "name": "Burning Shadows"
+    },
+    {
+        "id": "1938",
+        "name": "Alternate Art Promos"
+    },
+    {
+        "id": "1919",
+        "name": "Guardians Rising"
+    },
+    {
+        "id": "2069",
+        "name": "SM Trainer Kit: Lycanroc & Alolan Raichu"
+    },
+    {
+        "id": "1863",
+        "name": "Sun & Moon"
+    },
+    {
+        "id": "1861",
+        "name": "Sun & Moon Black Star Promos"
+    },
+    {
+        "id": "1842",
+        "name": "Evolutions"
+    },
+    {
+        "id": "1840",
+        "name": "Deck Exclusives"
+    },
+    {
+        "id": "1815",
+        "name": "Steam Siege"
+    },
+    {
+        "id": "1539",
+        "name": "League & Championship Cards"
+    },
+    {
+        "id": "1780",
+        "name": "Fates Collide"
+    },
+    {
+        "id": "1796",
+        "name": "XY Trainer Kit: Pikachu Libre & Suicune"
+    },
+    {
+        "id": "1728",
+        "name": "Generations"
+    },
+    {
+        "id": "1729",
+        "name": "Generations: Radiant Collection"
+    },
+    {
+        "id": "1701",
+        "name": "BREAKpoint"
+    },
+    {
+        "id": "1694",
+        "name": "McDonald's Promos 2015"
+    },
+    {
+        "id": "1661",
+        "name": "BREAKthrough"
+    },
+    {
+        "id": "1576",
+        "name": "Ancient Origins"
+    },
+    {
+        "id": "1534",
+        "name": "Roaring Skies"
+    },
+    {
+        "id": "1536",
+        "name": "XY Trainer Kit: Latias & Latios"
+    },
+    {
+        "id": "1528",
+        "name": "Jumbo Cards"
+    },
+    {
+        "id": "1525",
+        "name": "Double Crisis"
+    },
+    {
+        "id": "1509",
+        "name": "Primal Clash"
+    },
+    {
+        "id": "1533",
+        "name": "XY Trainer Kit: Bisharp & Wigglytuff"
+    },
+    {
+        "id": "1494",
+        "name": "Phantom Forces"
+    },
+    {
+        "id": "1481",
+        "name": "Furious Fists"
+    },
+    {
+        "id": "1692",
+        "name": "McDonald's Promos 2014"
+    },
+    {
+        "id": "1464",
+        "name": "Flashfire"
+    },
+    {
+        "id": "1532",
+        "name": "XY Trainer Kit: Sylveon & Noivern"
+    },
+    {
+        "id": "1387",
+        "name": "XY"
+    },
+    {
+        "id": "1451",
+        "name": "XY Promos"
+    },
+    {
+        "id": "1409",
+        "name": "Legendary Treasures"
+    },
+    {
+        "id": "1465",
+        "name": "Legendary Treasures: Radiant Collection"
+    },
+    {
+        "id": "1370",
+        "name": "Plasma Blast"
+    },
+    {
+        "id": "1382",
+        "name": "Plasma Freeze"
+    },
+    {
+        "id": "1413",
+        "name": "Plasma Storm"
+    },
+    {
+        "id": "1408",
+        "name": "Boundaries Crossed"
+    },
+    {
+        "id": "1394",
+        "name": "Dragons Exalted"
+    },
+    {
+        "id": "1386",
+        "name": "Dark Explorers"
+    },
+    {
+        "id": "1385",
+        "name": "Noble Victories"
+    },
+    {
+        "id": "1538",
+        "name": "BW Trainer Kit: Excadrill & Zoroark"
+    },
+    {
+        "id": "1424",
+        "name": "Emerging Powers"
+    },
+    {
+        "id": "1400",
+        "name": "Black & White"
+    },
+    {
+        "id": "1415",
+        "name": "Call of Legends"
+    },
+    {
+        "id": "2332",
+        "name": "Professor Program Promos"
+    },
+    {
+        "id": "1381",
+        "name": "HS-Triumphant"
+    },
+    {
+        "id": "1403",
+        "name": "HS-Undaunted"
+    },
+    {
+        "id": "2205",
+        "name": "Pikachu World Collection Promos"
+    },
+    {
+        "id": "1399",
+        "name": "HS-Unleashed"
+    },
+    {
+        "id": "1453",
+        "name": "HGSS Promos"
+    },
+    {
+        "id": "1391",
+        "name": "Arceus"
+    },
+    {
+        "id": "1384",
+        "name": "Supreme Victors"
+    },
+    {
+        "id": "2175",
+        "name": "Burger King Promos"
+    },
+    {
+        "id": "2155",
+        "name": "Countdown Calendar Promos"
+    },
+    {
+        "id": "1417",
+        "name": "Legends Awakened"
+    },
+    {
+        "id": "1405",
+        "name": "Great Encounters"
+    },
+    {
+        "id": "1541",
+        "name": "DP Trainer Kit: Manaphy & Lucario"
+    },
+    {
+        "id": "1430",
+        "name": "Diamond & Pearl"
+    },
+    {
+        "id": "1421",
+        "name": "Diamond and Pearl Promos"
+    },
+    {
+        "id": "1411",
+        "name": "Dragon Frontiers"
+    },
+    {
+        "id": "1395",
+        "name": "Crystal Guardians"
+    },
+    {
+        "id": "1429",
+        "name": "Delta Species"
+    },
+    {
+        "id": "1398",
+        "name": "Unseen Forces"
+    },
+    {
+        "id": "1410",
+        "name": "Emerald"
+    },
+    {
+        "id": "1404",
+        "name": "Deoxys"
+    },
+    {
+        "id": "1853",
+        "name": "EX Battle Stadium"
+    },
+    {
+        "id": "2214",
+        "name": "Kids WB Promos"
+    },
+    {
+        "id": "1377",
+        "name": "Team Magma vs Team Aqua"
+    },
+    {
+        "id": "1376",
+        "name": "Dragon"
+    },
+    {
+        "id": "1397",
+        "name": "Aquapolis"
+    },
+    {
+        "id": "1455",
+        "name": "Best of Promos"
+    },
+    {
+        "id": "1373",
+        "name": "Team Rocket"
+    },
+    {
+        "id": "630",
+        "name": "Fossil"
+    },
+    {
+        "id": "1418",
+        "name": "WoTC Promo"
+    },
+    {
+        "id": "2289",
+        "name": "Blister Exclusives"
+    },
+    {
+        "id": "604",
+        "name": "Base"
+    },
+    {
+        "id": "1663",
+        "name": "Base Set (Shadowless)"
+    },
+    {
+        "id": "605",
+        "name": "Base Set 2"
+    },
+    {
+        "id": "1407",
+        "name": "Black and White Promos"
+    },
+    {
+        "id": "609",
+        "name": "DP Training Kit 1 Blue"
+    },
+    {
+        "id": "610",
+        "name": "DP Training Kit 1 Gold"
+    },
+    {
+        "id": "1426",
+        "name": "Dragon Vault"
+    },
+    {
+        "id": "1543",
+        "name": "EX Trainer Kit 1: Latias & Latios"
+    },
+    {
+        "id": "1542",
+        "name": "EX Trainer Kit 2: Plusle & Minun"
+    },
+    {
+        "id": "1375",
+        "name": "Expedition Base Set"
+    },
+    {
+        "id": "1419",
+        "name": "FireRed & LeafGreen"
+    },
+    {
+        "id": "1440",
+        "name": "Gym Challenge"
+    },
+    {
+        "id": "1441",
+        "name": "Gym Heroes"
+    },
+    {
+        "id": "1402",
+        "name": "HeartGold & SoulSilver"
+    },
+    {
+        "id": "1540",
+        "name": "HGSS Trainer Kit: Gyarados & Raichu"
+    },
+    {
+        "id": "1416",
+        "name": "Hidden Legends"
+    },
+    {
+        "id": "1379",
+        "name": "Holon Phantoms"
+    },
+    {
+        "id": "635",
+        "name": "Jungle"
+    },
+    {
+        "id": "1522",
+        "name": "Kalos Starter Set"
+    },
+    {
+        "id": "1378",
+        "name": "Legend Maker"
+    },
+    {
+        "id": "1374",
+        "name": "Legendary Collection"
+    },
+    {
+        "id": "1390",
+        "name": "Majestic Dawn"
+    },
+    {
+        "id": "1401",
+        "name": "McDonald's Promos 2011"
+    },
+    {
+        "id": "1427",
+        "name": "McDonald's Promos 2012"
+    },
+    {
+        "id": "1368",
+        "name": "Mysterious Treasures"
+    },
+    {
+        "id": "1444",
+        "name": "Neo Destiny"
+    },
+    {
+        "id": "1434",
+        "name": "Neo Discovery"
+    },
+    {
+        "id": "1396",
+        "name": "Neo Genesis"
+    },
+    {
+        "id": "1389",
+        "name": "Neo Revelation"
+    },
+    {
+        "id": "1412",
+        "name": "Next Destinies"
+    },
+    {
+        "id": "1423",
+        "name": "Nintendo Promos"
+    },
+    {
+        "id": "1406",
+        "name": "Platinum"
+    },
+    {
+        "id": "1422",
+        "name": "POP Series 1"
+    },
+    {
+        "id": "1447",
+        "name": "POP Series 2"
+    },
+    {
+        "id": "1442",
+        "name": "POP Series 3"
+    },
+    {
+        "id": "1452",
+        "name": "POP Series 4"
+    },
+    {
+        "id": "1439",
+        "name": "POP Series 5"
+    },
+    {
+        "id": "1432",
+        "name": "POP Series 6"
+    },
+    {
+        "id": "1414",
+        "name": "POP Series 7"
+    },
+    {
+        "id": "1450",
+        "name": "POP Series 8"
+    },
+    {
+        "id": "1446",
+        "name": "POP Series 9"
+    },
+    {
+        "id": "1383",
+        "name": "Power Keepers"
+    },
+    {
+        "id": "1367",
+        "name": "Rising Rivals"
+    },
+    {
+        "id": "1393",
+        "name": "Ruby & Sapphire"
+    },
+    {
+        "id": "1433",
+        "name": "Pokémon Rumble"
+    },
+    {
+        "id": "1392",
+        "name": "Sandstorm"
+    },
+    {
+        "id": "1380",
+        "name": "Secret Wonders"
+    },
+    {
+        "id": "1372",
+        "name": "Skyridge"
+    },
+    {
+        "id": "648",
+        "name": "Southern Islands"
+    },
+    {
+        "id": "1369",
+        "name": "Stormfront"
+    },
+    {
+        "id": "1428",
+        "name": "Team Rocket Returns"
+    }
+]
