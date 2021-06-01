@@ -13,6 +13,7 @@ from threading import Thread
 from discord_slash import SlashCommand, SlashContext
 import datetime
 import achievements
+import config
 version="0.5"
 badges = {"cascade" : "<:Cascade_Badge:833053566419730492>", "volcano": "<:Volcano_Badge:833053501961666560>", "earth" : "<:Earth_Badge:833053489244012565>","marsh" : "<:Marsh_Badge:833053514119774260>", "rainbow" : "<:Rainbow_Badge:833053536677396530>","soul" : "<:Soul_Badge:833053526070394900>", "thunder" : "<:Thunder_Badge:833053556067401789>", "boulder" : "<:Boulder_Badge:828438440056061992>"}
 changelogText="Added gems\nAdded -show command\nYou unlock packs now by finishing sets\nadd setcompletion command\nAdded website to buy gems to unlock packs"
@@ -809,4 +810,4 @@ async def slashCommand(ctx: SlashContext):
 loadCollection()
 #grab command
 
-client.run(open("bot_token.txt","r").read())
+client.run(config.config["discord_token"])
