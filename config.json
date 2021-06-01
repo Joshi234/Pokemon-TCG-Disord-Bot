@@ -1,6 +1,7 @@
 {
     "discord_token"   : "",
     "stripe_token"    : "",
+    "stripe_secret"   : "",
     "tcgplayer_secret": "",
     "tcgplayer_token" : "",
     "tcgplayer_id"    : ""
