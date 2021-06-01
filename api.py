@@ -11,7 +11,9 @@ import random
 from datetime import datetime, timedelta
 import stripe
 import asyncio
-stripe.api_key = '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'
+import config
+
+stripe.api_key = config.config["stripe_token"]
 app = flask.Flask(__name__)
 
 CORS(app)
@@ -260,7 +262,7 @@ def create_checkout_session():
         return jsonify(error=str(e)), 403
 
 
-endpoint_secret = "whsec_fYDK1UK7n8BubzozrASAUyGdorgJEkij"
+endpoint_secret = config.config["stripe_secret"]
 @app.route("/stripe", methods=['POST'])
 def bought():
     payload = request.data

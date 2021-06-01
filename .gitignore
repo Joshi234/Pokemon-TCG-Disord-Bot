@@ -3,3 +3,5 @@
 database.db
 history.db
 bot_token.txt
+config.json
+id.txt

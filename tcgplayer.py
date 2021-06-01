@@ -5,6 +5,7 @@ import os,time
 from datetime import datetime
 from requests.api import get
 import functools
+import config
 version="1.37.0"
 aliases=json.loads(open("aliases.json","r").read())
 temp=[]
@@ -28,7 +29,7 @@ def getHeader():
     return header
 
 def getAccesToken():
-    data="grant_type=client_credentials&client_id=7c270ea4-5c51-402d-be29-d264151c797b&client_secret=bfa29f7c-037d-49ca-b65e-f114e5fec5e5"
+    data="grant_type=client_credentials&client_id="+config.config["tcgplayer_id"]+"&client_secret="+config.config["tcgplayer_secret"]
     header="application/x-www-form-urlencoded"
     result=requests.post("https://api.tcgplayer.com/token",data=data)
     result=json.loads(result.content.decode("utf-8"))
@@ -150,4 +151,4 @@ def getCardPriceBlocking(id):
     return "1"
 
 acces_token=getAccesToken()
-api_key="c7bcd5e4-c594-4e99-88ff-c9e64ad14909"
+api_key=config.config["tcgplayer_token"]
