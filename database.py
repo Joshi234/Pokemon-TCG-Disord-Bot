@@ -96,6 +96,8 @@ def editData(userId,row,value):
         c.execute("UPDATE DataBase SET profileColour=? WHERE userId=?",(str(value),str(userId),))
     elif(row.value == 8):
         c.execute("UPDATE DataBase SET gems=? WHERE userId=?",(str(value),str(userId),))
+    elif(row.value == 9):
+        c.execute("UPDATE DataBase SET battlePassLever=? WHERE userId=?",(str(value),str(userId),))
     else:
         print("Unknown Row")
     conn.commit()
@@ -115,6 +117,9 @@ def addToData(userId,row,value):
     elif (row.value==8):
         insertHistory(HistoryID.ADDTODATA,userId,"Added gems: "+str(value))
         c.execute("UPDATE DataBase SET gems=? WHERE userId=?",(str(amount+  int(value)),str(userId),))
+    elif (row.value==9):
+        insertHistory(HistoryID.ADDTODATA,userId,"Added battlePassLevel: "+str(value))
+        c.execute("UPDATE DataBase SET battlePassLevel=? WHERE userId=?",(str(amount+  int(value)),str(userId),))
     else:
         print("Unknown Row")
     conn.commit()
