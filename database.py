@@ -19,6 +19,7 @@ class Rows(Enum):
     SPECIALITEMS=6
     PROFILECOLOUR=7
     GEMS=8
+    BATTLEPASSLEVEL=9
 
 class HistoryID(Enum):
     PACKBOUGHT = 1
@@ -29,13 +30,13 @@ class HistoryID(Enum):
     ADDTODATA = 6
     SPECIALITEM = 7
 
-def addData(userId,bal,collection,xp,name, badges,specialItems, profileColour,gems):
+def addData(userId,bal,collection,xp,name, badges,specialItems, profileColour,gems, bpLevel):
     '''Inserts a new column into the DataBase'''
-    c.execute("INSERT INTO DataBase VALUES(?,?,?,?,?,?,?,?,?)",(str(userId),str(bal),str(collection),str(xp),str(name),str(badges),str(specialItems),int(profileColour),int(gems),))
+    c.execute("INSERT INTO DataBase VALUES(?,?,?,?,?,?,?,?,?,?)",(str(userId),str(bal),str(collection),str(xp),str(name),str(badges),str(specialItems),int(profileColour),int(gems),int(bpLevel),))
     conn.commit()
 
 def createNewDefaultData(userId):
-    addData(userId,0,"[]",0,"", json.dumps([]),json.dumps({"profileColours":[]}),0,0)
+    addData(userId,0,"[]",0,"", json.dumps([]),json.dumps({"profileColours":[]}),0,0,0)
     for ie in defaultPacks:
         addSpecialItem(userId,"packs",ie)
 def checkNameMigrated(userId,name):
