@@ -52,7 +52,7 @@ def getData(userId,row):
         createNewDefaultData(userId)
         return getData(userId,row)
 def getTop():
-    c.execute("SELECT * FROM DataBase ORDER BY xp DESC LIMIT 10")
+    c.execute("SELECT xp,name FROM DataBase ORDER BY xp DESC LIMIT 10")
     return c.fetchmany(10)
 
 def createDB():
@@ -235,6 +235,15 @@ def updateTable(version):
             addData(i[0],i[1],i[2],i[3],i[4], i[5],i[6],i[7],0)
             for ie in defaultPacks:
                 addSpecialItem(i[0],"packs",ie)
+    elif (version=="5"):
+        data=conn.execute("select * from DataBase")
+        list=data.fetchall()
+
+        c.execute("DROP TABLE DataBase")
+        c.execute('''CREATE TABLE DataBase
+        (userId TINYTEXT,balance  INTEGER ,collection LONGTEXT,xp INTEGER ,name TINYTEXT, badges TEXT, specialitems LONGTEXT, profileColour INT, gems INTEGER, battlePassLevel INTEGER )''')
+        for i in list:
+            addData(i[0],i[1],i[2],i[3],i[4], i[5],i[6],i[7],i[8],0)
 
 def insertHistory(historyId, userId, notes):
     historyC.execute("INSERT INTO History VALUES(?,?,?)",(str(userId),historyId.value,str(notes)))

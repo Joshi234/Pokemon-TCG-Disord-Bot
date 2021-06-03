@@ -226,7 +226,7 @@ async def buy_packs(messageRec,author,skipPack=False,messagePack=None,content=No
     sold_url="https://www.vhv.rs/dpng/f/418-4187632_sold-sign-png.png"
     await message.add_reaction("⬅️")
     await message.add_reaction("➡️")
-    await message.add_reaction(sell_emoji)
+    #await message.add_reaction(sell_emoji)
     sell_emoji_available=True
     sell_reaction=None
     i=0
@@ -347,7 +347,7 @@ async def leaderBoard(message):
     r=0
     for i in leader:
         r+=1
-        temp[str(r)+". "+str(i[4])]=i[3]
+        temp[str(r)+". "+str(i[0])]=i[1]
     for i in temp:
         embed.add_field(name=i,value=str(temp[i])+" XP",inline=False)
     await message.send(embed=embed)
