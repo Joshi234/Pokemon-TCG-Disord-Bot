@@ -27,6 +27,16 @@ prefix="&"
 names=[]
 claims={}
 id=0
+
+from discord.ext import tasks
+
+import dbl
+
+# This example uses tasks provided by discord.ext to create a task that posts guild count to top.gg every 30 minutes.
+
+dbl_token = 'top.gg token'  # set this to your bot's top.gg token
+
+
 for i in sets:
     names.append(i.replace(".json",""))
     cards[i.replace(".json","").lower()]=json.loads(open(r"cards/"+i,"r",encoding='utf8').read())
@@ -809,5 +819,17 @@ async def slashCommand(ctx: SlashContext):
 
 loadCollection()
 #grab command
+client.dblpy = dbl.DBLClient(client, dbl_token)
+
+@tasks.loop(minutes=30)
+async def update_stats():
+    """This function runs every 30 minutes to automatically update your server count."""
+    try:
+        await bot.dblpy.post_guild_count()
+        print(f'Posted server count ({client.dblpy.guild_count})')
+    except Exception as e:
+        print('Failed to post server count\n{}: {}'.format(type(e).__name__, e))
+
+update_stats.start()
 
 client.run(config.config["discord_token"])
