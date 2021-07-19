@@ -19,6 +19,7 @@ class Rows(Enum):
     SPECIALITEMS=6
     PROFILECOLOUR=7
     GEMS=8
+    BATTLEPASSLEVEL=9
 
 class HistoryID(Enum):
     PACKBOUGHT = 1
@@ -29,13 +30,13 @@ class HistoryID(Enum):
     ADDTODATA = 6
     SPECIALITEM = 7
 
-def addData(userId,bal,collection,xp,name, badges,specialItems, profileColour,gems):
+def addData(userId,bal,collection,xp,name, badges,specialItems, profileColour,gems, bpLevel):
     '''Inserts a new column into the DataBase'''
-    c.execute("INSERT INTO DataBase VALUES(?,?,?,?,?,?,?,?,?)",(str(userId),str(bal),str(collection),str(xp),str(name),str(badges),str(specialItems),int(profileColour),int(gems),))
+    c.execute("INSERT INTO DataBase VALUES(?,?,?,?,?,?,?,?,?,?)",(str(userId),str(bal),str(collection),str(xp),str(name),str(badges),str(specialItems),int(profileColour),int(gems),int(bpLevel),))
     conn.commit()
 
 def createNewDefaultData(userId):
-    addData(userId,0,"[]",0,"", json.dumps([]),json.dumps({"profileColours":[]}),0,0)
+    addData(userId,0,"[]",0,"", json.dumps([]),json.dumps({"profileColours":[]}),0,0,0)
     for ie in defaultPacks:
         addSpecialItem(userId,"packs",ie)
 def checkNameMigrated(userId,name):
@@ -52,7 +53,7 @@ def getData(userId,row):
         createNewDefaultData(userId)
         return getData(userId,row)
 def getTop():
-    c.execute("SELECT * FROM DataBase ORDER BY xp DESC LIMIT 10")
+    c.execute("SELECT xp,name FROM DataBase ORDER BY xp DESC LIMIT 10")
     return c.fetchmany(10)
 
 def createDB():
@@ -95,6 +96,8 @@ def editData(userId,row,value):
         c.execute("UPDATE DataBase SET profileColour=? WHERE userId=?",(str(value),str(userId),))
     elif(row.value == 8):
         c.execute("UPDATE DataBase SET gems=? WHERE userId=?",(str(value),str(userId),))
+    elif(row.value == 9):
+        c.execute("UPDATE DataBase SET battlePassLever=? WHERE userId=?",(str(value),str(userId),))
     else:
         print("Unknown Row")
     conn.commit()
@@ -114,6 +117,9 @@ def addToData(userId,row,value):
     elif (row.value==8):
         insertHistory(HistoryID.ADDTODATA,userId,"Added gems: "+str(value))
         c.execute("UPDATE DataBase SET gems=? WHERE userId=?",(str(amount+  int(value)),str(userId),))
+    elif (row.value==9):
+        insertHistory(HistoryID.ADDTODATA,userId,"Added battlePassLevel: "+str(value))
+        c.execute("UPDATE DataBase SET battlePassLevel=? WHERE userId=?",(str(amount+  int(value)),str(userId),))
     else:
         print("Unknown Row")
     conn.commit()
@@ -235,6 +241,15 @@ def updateTable(version):
             addData(i[0],i[1],i[2],i[3],i[4], i[5],i[6],i[7],0)
             for ie in defaultPacks:
                 addSpecialItem(i[0],"packs",ie)
+    elif (version=="5"):
+        data=conn.execute("select * from DataBase")
+        list=data.fetchall()
+
+        c.execute("DROP TABLE DataBase")
+        c.execute('''CREATE TABLE DataBase
+        (userId TINYTEXT,balance  INTEGER ,collection LONGTEXT,xp INTEGER ,name TINYTEXT, badges TEXT, specialitems LONGTEXT, profileColour INT, gems INTEGER, battlePassLevel INTEGER )''')
+        for i in list:
+            addData(i[0],i[1],i[2],i[3],i[4], i[5],i[6],i[7],i[8],0)
 
 def insertHistory(historyId, userId, notes):
     historyC.execute("INSERT INTO History VALUES(?,?,?)",(str(userId),historyId.value,str(notes)))
