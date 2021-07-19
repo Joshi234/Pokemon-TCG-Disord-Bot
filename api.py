@@ -36,18 +36,23 @@ def home():
 @app.route('/api/v1/collection', methods=['GET'])
 def getCollection():
 
+    page = int(request.args["page"])
+    pagesize = int(request.args["pagesize"])
+    if(pagesize > 500):
+        pagesize = 500
     if "id" in request.args:
-        
-        return getData(request.args["id"],Rows.COLLECTION)
+        return json.dumps(json.loads(getData(request.args["id"],Rows.COLLECTION))[page*pagesize:(page*pagesize)+pagesize])
     elif "access_token" in request.args:
         r=json.loads(getId(request.args["access_token"]))["id"]
-        return getData(r,Rows.COLLECTION)
+        return json.dumps(json.loads(getData(r,Rows.COLLECTION))[page*pagesize:(page*pagesize)+pagesize])
     else:
         return "Invalid Request"
+
 @app.route('/api/v1/marketplace', methods=['GET'])
 def getMarketplace():
     global marketplace
     return jsonify(marketplace)
+
 @app.route('/api/v1/sell', methods=['GET'])
 def sellCard():
     global marketplace
@@ -82,6 +87,7 @@ def getProfilePic():
 def getBal():
     id=json.loads(getId(request.args["access_token"]))["id"]
     return str(getData(id,Rows.BALANCE))
+
 @app.route('/api/v1/vote', methods=['POST'])
 def vote():
     args=json.loads(request.data)
